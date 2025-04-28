@@ -1,0 +1,32 @@
+digraph Tree {
+label="Decision Tree - Train/Test 40_60";
+labelloc=top;
+fontsize=20;
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<bill depth &le; 16.05<br/>entropy = 1.512<br/>samples = 137<br/>value = [61, 27, 49]<br/>class = Adelie>, fillcolor="#fbeee4"] ;
+1 [label=<entropy = 0.0<br/>samples = 45<br/>value = [0, 0, 45]<br/>class = Gentoo>, fillcolor="#8139e5"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<bill length &le; 46.4<br/>entropy = 1.109<br/>samples = 92<br/>value = [61.0, 27.0, 4.0]<br/>class = Adelie>, fillcolor="#f1bd97"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label=<bill length &le; 40.85<br/>entropy = 0.334<br/>samples = 65<br/>value = [61, 4, 0]<br/>class = Adelie>, fillcolor="#e78946"] ;
+2 -> 3 ;
+4 [label=<entropy = 0.0<br/>samples = 44<br/>value = [44, 0, 0]<br/>class = Adelie>, fillcolor="#e58139"] ;
+3 -> 4 ;
+5 [label=<island_Dream &le; 0.5<br/>entropy = 0.702<br/>samples = 21<br/>value = [17, 4, 0]<br/>class = Adelie>, fillcolor="#eb9f68"] ;
+3 -> 5 ;
+6 [label=<entropy = 0.0<br/>samples = 15<br/>value = [15, 0, 0]<br/>class = Adelie>, fillcolor="#e58139"] ;
+5 -> 6 ;
+7 [label=<sex_male &le; 0.5<br/>entropy = 0.918<br/>samples = 6<br/>value = [2, 4, 0]<br/>class = Chinstrap>, fillcolor="#9cf2c0"] ;
+5 -> 7 ;
+8 [label=<entropy = 0.0<br/>samples = 4<br/>value = [0, 4, 0]<br/>class = Chinstrap>, fillcolor="#39e581"] ;
+7 -> 8 ;
+9 [label=<entropy = 0.0<br/>samples = 2<br/>value = [2, 0, 0]<br/>class = Adelie>, fillcolor="#e58139"] ;
+7 -> 9 ;
+10 [label=<island_Dream &le; 0.5<br/>entropy = 0.605<br/>samples = 27<br/>value = [0, 23, 4]<br/>class = Chinstrap>, fillcolor="#5bea97"] ;
+2 -> 10 ;
+11 [label=<entropy = 0.0<br/>samples = 4<br/>value = [0, 0, 4]<br/>class = Gentoo>, fillcolor="#8139e5"] ;
+10 -> 11 ;
+12 [label=<entropy = 0.0<br/>samples = 23<br/>value = [0, 23, 0]<br/>class = Chinstrap>, fillcolor="#39e581"] ;
+10 -> 12 ;
+}
